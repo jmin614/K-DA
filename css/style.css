@@ -1,18 +1,10 @@
 @charset "UTF-8";
 @import "reset.css";
 @import "swiper.css";
-@import "popup.css";
 
 html,body{ height: 100%; }
-#member, #music, #art{
-  width: 100%; height: 105vh;
-}
-
-.fixed{ /*배너고정*/
-  position: fixed;
-  top: 0;
-  z-index: 10;
-}
+#member, #music, #art, #news{ width: 100%; height: 100vh; }
+.fixed{ /*배너고정*/ position: fixed; top: 0; z-index: 10; }
 
 /*nav*/
 nav{
@@ -41,6 +33,7 @@ nav ul li a{
   text-decoration: none;
 }
 
+/* slide */
 .slide{
   width: 100%; height: 100vh;
   background: url("../img/title.jpg");
@@ -71,9 +64,9 @@ nav ul li a{
 /*member*/
 #member{
   background: url("../img/member-bg.jpg");
-  background-size:  cover;
+  background-size: cover;
   position: relative;
-  padding-top: 20px;
+  padding-top: 3%;
   box-sizing: border-box;
 }
 #member ul{
@@ -82,14 +75,12 @@ nav ul li a{
   justify-content: center;
   margin-top: -70px;
 }
-
 #member ul li img{
   margin-left: 20px;
   border: 2px solid #511f8e;
   width: 100px; height: 100px;
   border-radius: 50px;
 }
-
 #member .img_box{
   display: flex;
   align-items: center;
@@ -102,21 +93,19 @@ nav ul li a{
 
 /*music*/
 #music{
-  padding-top: 100px;
+  padding-top: 8%;
   box-sizing: border-box;
   background: url("../img/music-bg.jpg");
+  background-position: center;
   background-size: cover;
 }
-/**/
-.swiper-container {
+#music .swiper-container {
   width: 1000px;
 }
-
-.swiper-container iframe{
+#music .swiper-container iframe{
   width: 800px; height: 450px;
 }
-
-.swiper-slide {
+#music .swiper-slide {
   text-align: center;
   font-size: 18px;
   /* Center slide text vertically */
@@ -134,36 +123,118 @@ nav ul li a{
   align-items: center;
   display: block;
 }
+#music .swiper-text{ text-align: center; margin: 10px;  color: white;}
+#music .swiper-text h3{ font-size: 24px; font-weight: bold; padding-bottom: 3px;}
 
-.swiper-text{ text-align: center; margin: 10px;  color: white;}
-.swiper-text h3{ font-size: 24px; font-weight: bold; padding-bottom: 3px;}
-
+/* art */
 #art{
-  padding-top: 150px;
+  padding-top: 6%;
   box-sizing: border-box;
   background: #5F24A6;
   background-size: cover;
 }
 
-#art .art-pop-text{
-  width: 150px;
-  text-align: center;
+#art .art-text h3{
+  text-align: center; color: white;
   font-size: 20px; font-weight: bold;
-  margin: 20px 150px 0px   ;
-  border-left: 3px solid black
+  border: 1px solid white; padding: 5px;
+  margin: 3% 40% 1% 40%;
 }
 
-#art .art-pop ul{
-  width: 100%;
+#art .art-list{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#art label img{
-  width: 300px;
-  padding: 10px 5px;
+#art .btn img{ width: 300px; padding: 5px; cursor: pointer; }
+
+#art .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
+
+#art .modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 15% auto;
+  border: 1px solid #888; */
+  width: 85%; /* Could be more or less, depending on screen size */
+  position: relative;
+  margin-left: 8%;
+  margin-top: 4%;
+}
+
+#art .modal-content img{
+  width: 85%;
+}
+
+/* The Close Button */
+#art .close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  bottom: -30px;
+}
+#art .close:hover,
+#art .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* news */
+#news{
+  padding-top: 6%;
+  box-sizing: border-box;
+  background: #421973;
+  background-size: cover;
+
+}
+
+#news .news-link ul li, #news .news-comic ul span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+#news .news-comic ul{
+  padding-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#news .news-comic ul li {
+  padding: 3px;
+  position: relative;
+}
+#news .news-comic ul li img{
+  border: 3px solid white;
+  height: 300px;
+  box-sizing: border-box;
+}
+
+#news .news-comic ul li span{
+  position: absolute;
+  bottom: 10px; left: 10px; color: white;
+  font-weight: bold;
+}
+#news .news-comic ul li:hover img{ border: 3px solid #511f8e; }
+#news .news-comic ul li:hover span{ color: #511f8e; }
+
+
 
 
 
