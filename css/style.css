@@ -43,6 +43,11 @@ nav ul li a{
   background-position: center;
   background-size: cover;
 }
+
+.slide ul li a{
+  cursor: pointer;
+}
+
 .inside{
   position: relative;
   bottom: -50px;
@@ -61,9 +66,12 @@ nav ul li a{
 }
 
 
+
+
 /*member*/
 #member{
   background: url("../img/member-bg.jpg");
+  background-attachment:fixed;
   background-size: cover;
   position: relative;
   padding-top: 3%;
@@ -130,7 +138,8 @@ nav ul li a{
 #art{
   padding-top: 6%;
   box-sizing: border-box;
-  background: #5F24A6;
+  background: url("../img/member-bg.jpg");
+  background-attachment:fixed;
   background-size: cover;
 }
 
@@ -194,52 +203,12 @@ nav ul li a{
   cursor: pointer;
 }
 
-/* news */
-#news{
-  padding-top: 6%;
-  box-sizing: border-box;
-  background: #421973;
-  background-size: cover;
-
-}
-
-#news .news-link ul li, #news .news-comic ul span{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
-#news .news-comic ul{
-  padding-top: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#news .news-comic ul li {
-  padding: 3px;
-  position: relative;
-}
-#news .news-comic ul li img{
-  border: 3px solid white;
-  height: 300px;
-  box-sizing: border-box;
-}
-
-#news .news-comic ul li span{
-  position: absolute;
-  bottom: 10px; left: 10px; color: white;
-  font-weight: bold;
-}
-#news .news-comic ul li:hover img{ border: 3px solid #511f8e; }
-#news .news-comic ul li:hover span{ color: #511f8e; }
-
-
-
 
 
 
 footer{
-  margin-top: 10px; padding-bottom:10px;
+  background: #300d5c;
+  padding: 15px 0;
   text-align: center;
+  color: white;
 }
